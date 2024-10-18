@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best-Performing Student Recognition System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Best-Performing Student Recognition System</h1>
+
+        <!-- Dropdown to select the batch -->
+        <div class="form-layout">
+            <div class="form-group">
+                <label for="batch">Select Batch:</label>
+                <select id="batch" name="batch" required>
+                    <option value="" disabled selected>Select a batch</option>
+                    <option value="2020">Batch 2020</option>
+                    <option value="2021">Batch 2021</option>
+                    <option value="2022">Batch 2022</option>
+                    <option value="2023">Batch 2023</option>
+                    <!-- Add more batches as needed -->
+                </select>
+            </div>
+            <button id="fetchButton">Get Top 3 Students</button>
+        </div>
+
+        <h2>Top 3 Best-Performing Students</h2>
+        <ul id="topStudentsList">
+            <!-- List will be populated by JavaScript -->
+        </ul>
+    </div>
+
+    <script>
+        // Handle button click for fetching top students
+        document.getElementById('fetchButton').addEventListener('click', function() {
+            const selectedBatch = document.getElementById('batch').value;
+
+            // Ensure a batch is selected
+            if (!selectedBatch) {
+                alert("Please select a batch.");
+                return;
+            }
+
+            // Fetch top 3 students for the selected batch
+            fetch(`/top_students?batch=${selectedBatch}`)
+            .then(response => response.json())
+            .then(data => {
+                let topStudentsList = document.getElementById('topStudentsList');
+                topStudentsList.innerHTML = ''; // Clear the list before updating
+                
+                if (data.top_students && data.top_students.length > 0) {
+                    data.top_students.forEach(student => {
+                        let li = document.createElement('li');
+                        li.textContent = `${student.name}: Score = ${student.score.toFixed(2)}`;
+                        topStudentsList.appendChild(li);
+                    });
+                } else {
+                    topStudentsList.innerHTML = '<li>No students found for this batch.</li>';
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching top students:', error);
+                let topStudentsList = document.getElementById('topStudentsList');
+                topStudentsList.innerHTML = '<li>Error fetching students. Please try again later.</li>';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+[
+    {
+        "name": "Alice Johnson",
+        "batch": "2020",
+        "academic": 8.9,
+        "core_courses": 9.2,
+        "hackathons": 3,
+        "papers": 2,
+        "contributions": 4
+    },
+    {
+        "name": "Bob Smith",
+        "batch": "2020",
+        "academic": 9.1,
+        "core_courses": 8.8,
+        "hackathons": 2,
+        "papers": 1,
+        "contributions": 5
+    },
+    {
+        "name": "Charlie Davis",
+        "batch": "2020",
+        "academic": 8.7,
+        "core_courses": 9.5,
+        "hackathons": 4,
+        "papers": 3,
+        "contributions": 3
+    },
+    {
+        "name": "Diana Moore",
+        "batch": "2021",
+        "academic": 9.3,
+        "core_courses": 9.0,
+        "hackathons": 1,
+        "papers": 4,
+        "contributions": 2
+    },
+    {
+        "name": "Ethan Clark",
+        "batch": "2021",
+        "academic": 8.8,
+        "core_courses": 8.7,
+        "hackathons": 3,
+        "papers": 2,
+        "contributions": 5
+    },
+    {
+        "name": "Fiona Lewis",
+        "batch": "2021",
+        "academic": 9.5,
+        "core_courses": 9.4,
+        "hackathons": 5,
+        "papers": 3,
+        "contributions": 4
+    },
+    {
+        "name": "George Baker",
+        "batch": "2022",
+        "academic": 8.6,
+        "core_courses": 9.1,
+        "hackathons": 1,
+        "papers": 2,
+        "contributions": 6
+    },
+    {
+        "name": "Hannah White",
+        "batch": "2022",
+        "academic": 9.4,
+        "core_courses": 8.9,
+        "hackathons": 4,
+        "papers": 3,
+        "contributions": 5
+    },
+    {
+        "name": "Ian Brooks",
+        "batch": "2022",
+        "academic": 8.9,
+        "core_courses": 9.3,
+        "hackathons": 2,
+        "papers": 1,
+        "contributions": 4
+    },
+    {
+        "name": "Jenny Green",
+        "batch": "2023",
+        "academic": 9.6,
+        "core_courses": 9.5,
+        "hackathons": 5,
+        "papers": 4,
+        "contributions": 3
+    },
+    {
+        "name": "Kyle Hughes",
+        "batch": "2023",
+        "academic": 8.7,
+        "core_courses": 9.0,
+        "hackathons": 2,
+        "papers": 2,
+        "contributions": 6
+    },
+    {
+        "name": "Laura Black",
+        "batch": "2023",
+        "academic": 9.0,
+        "core_courses": 8.8,
+        "hackathons": 3,
+        "papers": 1,
+        "contributions": 4
+    }
+]
